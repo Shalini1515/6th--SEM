@@ -16,7 +16,7 @@
 
         Customer can be able to pay bills
         
-        Customers can and check whether the particular product is present in the store or not.
+        Customers can  check whether the particular product is present in the store or not.
 
     Non-Functional Requirements:
 
