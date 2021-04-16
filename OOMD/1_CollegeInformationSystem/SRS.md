@@ -27,6 +27,6 @@
 
 - The system should be convenient and easy to use by students, management and faculty.
 
--The response time should be very small
+- The response time should be very small
 
 - The system should be a reliable source of information viewing for students, COE and faculty.
