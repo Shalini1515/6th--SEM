@@ -1,5 +1,6 @@
 3. Stock Maintenance System
-    Purpose
+   
+   Purpose
     
         The stock maintenance system is basically for the customers who access the information about the stock and retrieves the information.
 
