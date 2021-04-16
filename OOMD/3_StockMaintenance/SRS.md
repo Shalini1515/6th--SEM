@@ -1,8 +1,10 @@
 3. Stock Maintenance System
     Purpose
+    
         The stock maintenance system is basically for the customers who access the information about the stock and retrieves the information.
 
     Functional Requirements:
+    
         There exists 2 roles in Stock Maintenanace System :
             Manager and Employee
         Manager can be able to add/delete or view stocks and products 
