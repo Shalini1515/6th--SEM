@@ -1,0 +1,157 @@
+
+1. Create a new collection
+
+ use Student
+
+
+2. Insert a value
+
+db.Student.insert({
+    "Name" : "Akash",
+    "RollNo:" : 1,
+    "Age" : 21,
+    "ContactNo" : "7894561230",
+    "EmailId": "akasha@gmail.com"
+})
+
+
+3. Insert multiple values at once
+
+var MyStudents = [
+    {
+        "Name" : "Akshay",
+        "RollNo:" : 2,
+        "Age" : 22,
+        "ContactNo" : "8945612370",
+        "EmailId": "akshay@gmail.com"
+    },
+    {
+        "Name" : "Anand",
+        "RollNo:" : 3,
+        "Age" : 21,
+        "ContactNo" : "1234567890",
+        "EmailId" : "anand@gmail.com"
+    },
+    {
+        "Name" : "Ayesha",
+        "RollNo:" : 4,
+        "Age" : 20,
+        "ContactNo" : "5289631470",
+        "EmailId" : "ayesha@gmail.com"
+    },
+    {
+        "Name" : "Vinay",
+        "RollNo:" : 5,
+        "Age" : 18,
+        "ContactNo" : "4561237890",
+        "EmailId" : "vinay@gmail.com"
+    },
+]
+
+db.Student.insert(MyStudents);
+
+
+4. Print all current values
+
+db.getCollection('Student').find({}).forEach(printjson)
+
+{
+	 "_id" : ObjectId("606ad5a6e581cc0b904470a5"),
+	 "Name" : "Akash",
+    	 "RollNo:" : 1,
+    	 "Age" : 21,
+    	 "ContactNo" : "7894561230",
+    	 "EmailId": "akasha@gmail.com"
+}
+{
+	"_id" : ObjectId("606ad60fe581cc0b904470a6"),
+	"Name" : "Akshay",
+        "RollNo:" : 2,
+        "Age" : 22,
+        "ContactNo" : "8945612370",
+        "EmailId": "akshay@gmail.com"
+}
+{
+	"_id" : ObjectId("606ad60fe581cc0b904470a7"),
+	"Name" : "Anand",
+        "RollNo:" : 3,
+        "Age" : 21,
+        "ContactNo" : "1234567890",
+        "EmailId" : "anand@gmail.com"
+}
+{
+	"_id" : ObjectId("606ad60fe581cc0b904470a8"),
+	"Name" : "Ayesha",
+        "RollNo:" : 4,
+        "Age" : 20,
+        "ContactNo" : "5289631470",
+        "EmailId" : "ayesha@gmail.com"
+}
+{
+	"_id" : ObjectId("606ad60fe581cc0b904470a9"),
+	"Name" : "Vinay",
+        "RollNo:" : 10,
+        "Age" : 18,
+        "ContactNo" : "4561237890",
+        "EmailId" : "vinay@gmail.com"
+}
+
+
+5.  Update RollNo of a student
+
+db.Student.update(
+{"RollNo:" : 10},
+{$set: { "EmailId" : "updated@gmail.com"}});
+
+db.getCollection('Student').find({"RollNo:":10}).forEach(printjson)
+
+{
+	"_id" : ObjectId("606ad60fe581cc0b904470a9"),
+	"Name" : "Vinay",
+        "RollNo:" : 10,
+        "Age" : 18,
+        "ContactNo" : "4561237890",
+        "EmailId" : "updated@gmail.com"
+}
+
+
+6.  Update Name of a student
+
+db.Student.update(
+{"Name" : "Akshay"},
+{$set: { "Name" : "Avanthika"}});
+
+db.getCollection('Student').find({"Name" : "Avanthika"}).forEach(printjson)
+
+{
+	"_id" : ObjectId("606ad5a6e581cc0b904470a5"),
+	"Name" : "Avanthika",
+	"RollNo:" : 2,
+        "Age" : 22,
+        "ContactNo" : "8945612370",
+        "EmailId": "akshay@gmail.com"
+}
+
+7.  Export to json
+
+mongoexport --db testdb --collection Student --out C:\Users\Shalini\Desktop\Student.json
+
+{"_id" : ObjectId("606ad5a6e581cc0b904470a5"),"Name" : "Akash","RollNo:" : 1,"Age" : 21,"ContactNo" : "7894561230","EmailId": "akasha@gmail.com"}
+
+{"_id" : ObjectId("606ad5a6e581cc0b904470a5"),"Name" : "Avanthika","RollNo:" : 2,"Age" : 22,"ContactNo" : "8945612370","EmailId": "akshay@gmail.com"}
+
+{"_id" : ObjectId("606ad60fe581cc0b904470a7"),"Name" : "Anand","RollNo:" : 3,"Age" : 21,"ContactNo" : "1234567890","EmailId" : "anand@gmail.com"}
+
+{"_id" : ObjectId("606ad60fe581cc0b904470a8"),"Name" : "Ayesha","RollNo:" : 4,"Age" : 20,"ContactNo" : "5289631470","EmailId" : "ayesha@gmail.com"}
+
+{"_id" : ObjectId("606ad60fe581cc0b904470a9"),"Name" : "Vinay","RollNo:" : 10,"Age" : 18,"ContactNo" : "4561237890","EmailId" : "updated@gmail.com"}
+
+8.  Drop Student
+
+db.getCollection('Student').drop()
+
+
+9.  Import from exported file
+
+mongoimport --db testdb --collection Student C:\Users\Shalini\Desktop\Student.json
+
