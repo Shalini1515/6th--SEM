@@ -1,0 +1,16 @@
+# Software Requirement Specification
+
+# Purpose 
+The graphics editor provides an Application Programmer’s Interface that enables a programmer to develop their own graphical model editor for a specific type of model.
+This API in turn, relies on extending the Eclipse Graphical Editing Framework to provide an environment in which the editor functions, and the programmer can create a graphical editor and palette of shapes in order to modify an underlying model.
+The graphical editor provides an interface with which the programmer implements the said editor for a given underlying model. Such an instance of the graphical editor allows a user to drag objects from a specified model into a working graphical diagram.
+
+# Requirements
+- It contains the toolbox which contains tools like: Line, Circle, Rectangle, Arc, Text, Draw, Eraser.
+- Color box or palette.
+- Standard toolbar with options for New, Open, Save, Toolbox and Text Toolbox.
+- One integrated view to users for toolbar, color box, menu, and graphic screen.
+- Easy handling of tools for users.
+- Ability to group several drawings into one i.e. complex drawing.
+- Provision of zoom in and zoom out.
+- Different shadings of line tool are provided.
