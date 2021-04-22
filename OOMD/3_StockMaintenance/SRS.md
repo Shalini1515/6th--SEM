@@ -1,6 +1,6 @@
-#Software Requirements Specification
+# Software Requirements Specification
 
-#Purpose
+# Purpose
 The stock maintenance system is basically for the customers who access the information about the stock and retrieves the information.
 
 # Requirements
