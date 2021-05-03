@@ -5,16 +5,17 @@
 
 ## To check the Hadoop services are up
 - D:\software\Installation\BDA\hadoop-3.2.1\sbin>jps
-###### 3892 ResourceManager
-###### 7480 DataNode
-###### 7672 Jps
-###### 4508 NodeManager
-###### 652 NameNode
+#
+    3892 ResourceManager
+    7480 DataNode
+    7672 Jps
+    4508 NodeManager
+    652 NameNode
 ## mkdir: To create a directory.
 - D:\software\Installation\BDA\hadoop-3.2.1\sbin>hdfs dfs -mkdir /creatingDir
 ## ls: This command is used to list all the files. Use lsr for recursive approach. It is useful when we want a hierarchy of a folder.
 - D:\software\Installation\BDA\hadoop-3.2.1\sbin>hdfs dfs -ls /
-###### Found 4 items
+# Found 4 items
     drwxr-xr-x   - Shalini supergroup          0 2021-05-03 18:51 /basicComm
     drwxr-xr-x   - Shalini supergroup          0 2021-05-03 19:13 /creatingDir
     drwxr-xr-x   - Shalini supergroup          0 2021-05-03 19:01 /sample
