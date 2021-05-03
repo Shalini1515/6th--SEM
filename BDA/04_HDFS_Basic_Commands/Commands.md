@@ -54,4 +54,8 @@
     -rw-r--r--   1 Shalini supergroup       7196 2021-05-03 19:34 /basicComm/employee.txt
     -rw-r--r--   1 Shalini supergroup          0 2021-05-03 18:28 /basicComm/testFile.txt
 
-
+#### copyToLocal (or) get: To copy files/folders from hdfs store to local file system
+- D:\software\Installation\BDA\hadoop-3.2.1\sbin>hdfs dfs -copyToLocal /basicComm/testFile.txt C:\Users\Shalini\Desktop\sample
+- D:\software\Installation\BDA\hadoop-3.2.1\sbin>hdfs dfs -get /creatingDir C:\Users\Shalini\Desktop\sample
+#### 
+    2021-05-03 19:44:18,587 INFO sasl.SaslDataTransferClient: SASL encryption trust check: localHostTrusted = false, remoteHostTrusted = false
